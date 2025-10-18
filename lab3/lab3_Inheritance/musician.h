@@ -18,7 +18,7 @@ public:
 private:
     QString name;
     Instrument instrument;
-    //Manager* manager; //асоціація
+    //Manager* manager;
 };
 
 #endif // MUSICIAN_H

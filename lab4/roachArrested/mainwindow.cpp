@@ -7,6 +7,8 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
+    setWindowTitle("Гра впіймай таргана!");
+
     roachSize = 80;
     roachX = roachY = 100;
     speedX = speedY = 2;
@@ -96,7 +98,7 @@ bool MainWindow::event(QEvent *e)
         if (polygon.containsPoint(center, Qt::OddEvenFill)){
             score++;
             ui->l_score->setText("Впіймано " + QString::number(score) + " р.");
-            qDebug() << "Таракан спійманий" << score << "раз!";
+            qDebug() << "Тарган спійманий" << score << "раз!";
 
             roachCaught = true;
             ui->l_roach->setPixmap(roachDead);
@@ -125,5 +127,3 @@ void MainWindow::paintEvent(QPaintEvent *event)
         p.drawPolyline(polygon);
     }
 }
-
-

@@ -22,8 +22,7 @@ int main()
 
     MusicalBand band(bandName, bandStyle, leader);
 
-    for (int i = 0; i < numMusicians; ++i)
-    {
+    for (int i = 0; i < numMusicians; ++i) {
         cout << "\n--- Musician " << (i+1) << " ---\n";
 
         cout << "Enter musician name: ";
@@ -53,8 +52,7 @@ int main()
          << " (" << band.getStyle().toStdString() << ")" << endl;
     cout << "Leader: " << leader.getName().toStdString() << endl;
 
-    for (int i = 0; i < band.getLen(); ++i)
-    {
+    for (int i = 0; i < band.getLen(); ++i) {
         Musician* m = band.getList().at(i);
         cout << "Musician " << (i+1) << ": " << m->getName().toStdString() << endl;
     }

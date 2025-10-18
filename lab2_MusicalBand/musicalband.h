@@ -28,8 +28,8 @@ public:
 private:
     QString name;
     QString style;
-    QList<Musician*> musicians;
-    BandLeader leader;
+    QList<Musician*> musicians; //агрегація
+    BandLeader leader; //композиція
 };
 
 #endif // MUSICALBAND_H
