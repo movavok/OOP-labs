@@ -122,7 +122,6 @@ void MainWindow::paintEvent(QPaintEvent *event)
     ui->scoreWidget->setGeometry(0, 0, ui->centralwidget->width(), ui->centralwidget->height());
 
     if (!polygon.isEmpty()) {
-        QPainter p(this);
         p.setPen(QPen(Qt::red, 2));
         p.drawPolyline(polygon);
     }
