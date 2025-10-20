@@ -8,11 +8,13 @@ class RegularAccount : public BankAccount
     double minBalance;
 
 public:
-    RegularAccount(const QString& accNumber, const QString& ownerName, double balance, double minBalance);
+    RegularAccount(const QString&, const QString&, double, double);
 
     double getMinBalance() const;
 
-    bool withdraw(double amount) override;
+    bool withdraw(double) override;
+
+    QString getType() const override;
 };
 
 #endif // REGULARACCOUNT_H

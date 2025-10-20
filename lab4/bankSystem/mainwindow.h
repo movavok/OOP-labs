@@ -2,8 +2,11 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QMessageBox>
 
 #include "bankaccount.h"
+#include "regularaccount.h"
+#include "interestaccount.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -22,5 +25,15 @@ public:
 private:
     Ui::MainWindow *ui;
     QList<BankAccount*> accounts;
+    void addAccount(BankAccount*);
+    void clearForm();
+    void updateTable(BankAccount*);
+    BankAccount* findAccountByNumber(QString);
+
+private slots:
+    void checkFormFilled();
+    void checkAccountType(const QString&);
+    void createAccount();
+    void doOperation();
 };
 #endif // MAINWINDOW_H

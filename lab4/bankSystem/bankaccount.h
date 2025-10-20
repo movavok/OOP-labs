@@ -7,14 +7,20 @@ class BankAccount
 {
 public:
     BankAccount();
-    BankAccount(const QString &accNumber, const QString &ownerName, double balance);
+    BankAccount(const QString&, const QString&, double);
+
+    virtual ~BankAccount() = default;
 
     QString getAccNumber() const;
     QString getOwnerName() const;
     double getBalance() const;
 
-    void deposit(double amount);
-    virtual bool withdraw(double amount);
+    void setBalance(double);
+
+    void deposit(double);
+    virtual bool withdraw(double);
+
+    virtual QString getType() const = 0;
 
 private:
     QString accNumber;

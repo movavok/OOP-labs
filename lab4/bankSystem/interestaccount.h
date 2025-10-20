@@ -8,10 +8,11 @@ class InterestAccount : public BankAccount
     double interestRate;
 
 public:
-    InterestAccount(const QString& accNumber, const QString& ownerName, double balance, double rate);
+    InterestAccount(const QString&, const QString&, double, double);
 
     double getInterestRate() const;
-    void applyInterest();
+
+    QString getType() const override;
 };
 
 #endif // INTERESTACCOUNT_H

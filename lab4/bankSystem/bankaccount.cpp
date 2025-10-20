@@ -10,6 +10,8 @@ QString BankAccount::getAccNumber() const { return accNumber; }
 QString BankAccount::getOwnerName() const { return ownerName; }
 double BankAccount::getBalance() const { return balance; }
 
+void BankAccount::setBalance(double newBalance) { balance = newBalance; }
+
 void BankAccount::deposit(double amount) { if (amount > 0) balance += amount; }
 
 bool BankAccount::withdraw(double amount) {
