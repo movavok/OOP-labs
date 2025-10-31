@@ -116,13 +116,13 @@ bool MainWindow::event(QEvent *e)
 void MainWindow::paintEvent(QPaintEvent *event)
 {
     QMainWindow::paintEvent(event);
-    QPainter p(this);
+    QPainter painter(this);
     QPixmap bg(":/floor.jpeg");
-    p.drawPixmap(0, 0, width(), height(), bg);
+    painter.drawPixmap(0, 0, width(), height(), bg);
     ui->scoreWidget->setGeometry(0, 0, ui->centralwidget->width(), ui->centralwidget->height());
 
     if (!polygon.isEmpty()) {
-        p.setPen(QPen(Qt::red, 2));
-        p.drawPolyline(polygon);
+        painter.setPen(QPen(Qt::red, 2));
+        painter.drawPolyline(polygon);
     }
 }
