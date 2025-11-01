@@ -63,7 +63,7 @@ void MainWindow::checkEscape() {
         ui->l_message->show();
 
         if (score > 5) score -= 1;
-        ui->l_score->setText("Впіймано " + QString::number(score) + " р.");
+        ui->l_score->setText("Рівень " + QString::number(level) + ". Впіймано " + QString::number(score) + " р.");
     }
 }
 
@@ -99,7 +99,7 @@ bool MainWindow::event(QEvent *event)
 
         if (roach && polygon.containsPoint(roach->getCollision().center(), Qt::OddEvenFill)){
             score++;
-            ui->l_score->setText("Впіймано " + QString::number(score) + " р.");
+            ui->l_score->setText("Рівень " + QString::number(level) + ". Впіймано " + QString::number(score) + " р.");
             qDebug() << "Тарган спійманий" << score << "раз!";
 
             if (level == 1 && score >= 5) {
