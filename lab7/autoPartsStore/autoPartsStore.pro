@@ -1,0 +1,12 @@
+TEMPLATE = app
+CONFIG += console c++17
+CONFIG -= app_bundle
+CONFIG -= qt
+
+SOURCES += \
+        inventory.cpp \
+        main.cpp
+
+HEADERS += \
+    Part.h \
+    inventory.h
